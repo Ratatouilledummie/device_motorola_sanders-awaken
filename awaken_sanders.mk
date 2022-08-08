@@ -15,19 +15,28 @@
 # Inherit from sanders device
 $(call inherit-product, device/motorola/sanders/device.mk)
 
-# Inherit some common Pixel Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_GAPPS_ARCH := arm64
+# Inherit some common Awaken stuff.
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
+USE_GAPPS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_QUICK_TAP := false
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := aosp_sanders
+PRODUCT_NAME := awaken_sanders
 PRODUCT_DEVICE := sanders
 PRODUCT_MODEL := Moto G (5S) Plus
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
+
+# Build Type
+AWAKEN_BUILD_TYPE := UNOFFICIAL
