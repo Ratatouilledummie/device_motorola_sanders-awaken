@@ -14,9 +14,9 @@
 
 # inherit Moto G (5S) Plus device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_sanders.mk
+    $(LOCAL_DIR)/arrow_sanders.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_sanders-user \
-    awaken_sanders-userdebug \
-    awaken_sanders-eng
+    arrow_sanders-user \
+    arrow_sanders-userdebug \
+    arrow_sanders-eng
