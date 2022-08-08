@@ -21,7 +21,7 @@ DEVICE_PATH := device/motorola/sanders
 TARGET_OTA_ASSERT_DEVICE := sanders
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 400
 
 # Kernel
 BOARD_KERNEL_SEPARATED_DT := true
